@@ -149,29 +149,14 @@ STATIC_URL = 'static/'
 
 # settings.py
 STATICFILES_DIRS = [
-    BASE_DIR / "backend/static",  # include React assets
+    BASE_DIR / "static",  # include React assets
 ]
 
-TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / "templates"],   # your templates folder
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
+STATIC_ROOT = BASE_DIR / 'staticfiles'   # collected static files
 
-                # REQUIRED FOR ADMIN
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-
-                'django.template.context_processors.media',
-                'django.template.context_processors.static',
-            ],
-        },
-    },
-]
+# Media files (uploaded images etc.)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
