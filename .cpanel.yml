@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/bseriesbseries/nature-pulse-expeditions
+    - /bin/cp -R ./* $DEPLOYPATH
