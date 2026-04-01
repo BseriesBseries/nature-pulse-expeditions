@@ -152,7 +152,7 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",  # include React assets
 ]
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'   # collected static files
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')   # collected static files
 
 # Media files (uploaded images etc.)
 MEDIA_URL = '/media/'
