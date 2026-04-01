@@ -146,7 +146,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# This is where Django COLLECTS static files for production
 STATIC_ROOT = os.path.join(BASE_DIR, 'public', 'static')
+
+# This is where YOUR static files live during development (can be empty list if none yet)
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),  # only keep this if the folder exists
+]
 
 # Media files (uploaded images etc.)
 MEDIA_URL = '/media/'
