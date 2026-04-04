@@ -28,3 +28,34 @@ Why Choose Us / Advantages (icons + short text)
 Testimonials / Reviews (carousel or grid)
 Call-to-Action Banner (e.g. "Subscribe to newsletter" or "Contact us")
 Footer (links, social, contact)
+
+
+
+Nature_Pulse_Expeditions/
+│___Nature_Pulse_Expeditions/(settings,wsgi)
+├── Tours_Safaris
+|    |-----migrations
+|    |-----frontend
+        |----dist
+        |----node_modules
+        |----public
+        |----src
+            |----assets(images)
+            |----components(mui template.jsx)
+            |----page(mui template.jsx)
+            |----App.jsx
+            |----config.jsx
+            |----main.jsx
+        |----index.html
+        |----package.json
+        |----vite.config.js / react config
+        |----
+|    |-----serializer.py
+|    |-----modal.py
+|    |-----view.py
+|── manage.py
+|── venv
+├── requirements.txt/
+|── db.sqlite3/
+│── env/
+|── cpanel.yml

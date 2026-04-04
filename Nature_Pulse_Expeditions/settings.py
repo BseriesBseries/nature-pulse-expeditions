@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)ucm0npg+v@v4&#sx-_92)cp4$hkuqzh44$+&lq04m8+etr*i4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False#True
+DEBUG = False
 
 ALLOWED_HOSTS = ['naturepulseexpeditions.com', 'www.naturepulseexpeditions.com']
 
@@ -60,11 +60,11 @@ ROOT_URLCONF = 'Nature_Pulse_Expeditions.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'Tours_Safaris', 'frontend', 'dist')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
-                'django.template.context_processors.debug',
+                #'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
@@ -147,12 +147,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# This is where Django COLLECTS static files for production
-STATIC_ROOT = os.path.join(BASE_DIR, 'public', 'static')
-
-# This is where YOUR static files live during development (can be empty list if none yet)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),  # only keep this if the folder exists
+    os.path.join(BASE_DIR, 'Tours_Safaris', 'frontend', 'dist', 'assets'),
 ]
 
 # Media files (uploaded images etc.)
